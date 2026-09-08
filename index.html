@@ -3,13 +3,91 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="ZOOX — The Legacy of Fine Taste. Dumka's premier luxury dining restaurant. Multi-cuisine fine dining, private cabins, and unforgettable evenings." />
-    <title>ZOOX — The Legacy of Fine Taste</title>
+    <title>ZOOX — The Legacy of Fine Taste | Luxury Dining & Restaurant in Dumka</title>
     
+    <!-- Primary Meta Tags -->
+    <meta name="title" content="ZOOX — The Legacy of Fine Taste | Luxury Dining & Restaurant in Dumka" />
+    <meta name="description" content="Experience ZOOX, Dumka's premier multi-cuisine luxury restaurant. Authentic Indian Tandoor, Continental delicacies, Asian wok dishes, private glass cabins, and EV charging." />
+    <meta name="keywords" content="ZOOX Dumka, restaurant in Dumka, fine dining Dumka, private cabin restaurant Dumka, best food Dumka, The Grand Portico, luxury restaurant Jharkhand, tandoori Dumka, continental food Dumka" />
+    <meta name="author" content="ZOOX — A Unit of The Grand Portico" />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#111a15" />
+    
+    <!-- Geo Location Tags for Local SEO -->
+    <meta name="geo.region" content="IN-JH" />
+    <meta name="geo.placename" content="Dumka" />
+    <meta name="geo.position" content="24.270924;87.252063" />
+    <meta name="ICBM" content="24.270924, 87.252063" />
+
+    <!-- Open Graph / Facebook / WhatsApp -->
+    <meta property="og:type" content="restaurant" />
+    <meta property="og:site_name" content="ZOOX Restaurant Dumka" />
+    <meta property="og:url" content="https://ftwflash9.github.io/zoox-/" />
+    <meta property="og:title" content="ZOOX — The Legacy of Fine Taste | Luxury Dining in Dumka" />
+    <meta property="og:description" content="Dumka's finest multi-cuisine restaurant & private glass cabins. Authentic Indian Tandoor, Continental delicacies, Asian specialties & handcrafted desserts." />
+    <meta property="og:image" content="assets/zoox-interior-04.webp" />
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="ZOOX — The Legacy of Fine Taste | Dumka" />
+    <meta name="twitter:description" content="Dumka's finest multi-cuisine restaurant & private glass cabins. Authentic Tandoori, Continental & Asian cuisine." />
+    <meta name="twitter:image" content="assets/zoox-interior-04.webp" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+
+    <!-- Performance & Preload Optimizations -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
+    <link rel="preload" as="image" href="assets/zoox-interior-04.webp" fetchpriority="high" />
     <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
+
+    <!-- Schema.org JSON-LD for Google Rich Results -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Restaurant",
+      "name": "ZOOX",
+      "legalName": "ZOOX — A Unit of The Grand Portico",
+      "image": "assets/zoox-interior-04.webp",
+      "description": "Dumka's premier luxury multi-cuisine fine dining restaurant featuring authentic Tandoor, Continental, and Asian cuisine with private glass cabins and EV charging.",
+      "telephone": "+916299382018",
+      "priceRange": "₹₹",
+      "servesCuisine": ["North Indian", "Tandoori", "Continental", "Asian", "Chinese", "Desserts"],
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Plot No. 316, Near Rampur Chowk, Tarapith - Dumka Road",
+        "addressLocality": "Dumka",
+        "addressRegion": "Jharkhand",
+        "postalCode": "814119",
+        "addressCountry": "IN"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 24.270924,
+        "longitude": 87.252063
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+          "opens": "09:00",
+          "closes": "23:30"
+        }
+      ],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "47",
+        "bestRating": "5"
+      },
+      "hasMenu": "menu.html",
+      "acceptsReservations": "True"
+    }
+    </script>
   </head>
   <body>
     <div class="notice">DAILY 9:00 AM – 11:30 PM · TARAPITH ROAD, RAMPUR, DUMKA</div>
@@ -33,7 +111,7 @@
     <main>
       <!-- HERO -->
       <section class="hero">
-        <img class="hero-bg" src="assets/zoox-interior-04.webp" alt="ZOOX fine dining restaurant interior" />
+        <img class="hero-bg" src="assets/zoox-interior-04.webp" alt="ZOOX luxury fine dining restaurant interior in Dumka" fetchpriority="high" decoding="async" width="1920" height="1080" />
         <div class="hero-content">
           <span class="overline">A UNIT OF THE GRAND PORTICO</span>
           <h1>The legacy<br /><em>of fine taste.</em></h1>
@@ -299,6 +377,6 @@
     </footer>
 
     <button class="back-to-top" aria-label="Back to top">↑</button>
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
   </body>
 </html>
