@@ -1007,35 +1007,111 @@ em {
   .header-actions .btn {
     display: none;
   }
+  .phone-link {
+    font-size: 11px;
+  }
   .menu-toggle {
     display: block;
   }
+
+  /* ─── MOBILE HERO FIX ─── */
+  .hero {
+    min-height: 100vh;
+    min-height: 100svh;
+    align-items: flex-end;
+    padding: 0 6vw 60px;
+    text-align: center;
+  }
+  .hero-bg {
+    filter: brightness(0.35);
+    object-position: center 30%;
+  }
   .hero-content {
     padding-top: 0;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .hero h1 {
+    font-size: 42px;
+    line-height: 1.05;
+    margin-bottom: 15px;
+  }
+  .hero p {
+    font-size: 15px;
+    margin-bottom: 25px;
+    max-width: 320px;
+    line-height: 1.5;
+  }
+  .hero-actions {
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+    max-width: 280px;
+  }
+  .hero-actions .btn {
+    width: 100%;
+    padding: 14px 20px;
+    font-size: 11px;
+    justify-content: center;
   }
   .hero-scroll {
     display: none;
   }
+
+  /* ─── MOBILE STATS ─── */
   .stats-strip {
-    gap: 20px;
+    gap: 15px;
     padding: 30px 5vw;
+    flex-wrap: wrap;
+    justify-content: space-around;
   }
   .stat-divider {
     display: none;
   }
   .stat-number {
-    font-size: 28px;
+    font-size: 26px;
+  }
+  .stat-label {
+    font-size: 9px;
+  }
+
+  /* ─── MOBILE SECTIONS ─── */
+  .section {
+    padding: 60px 5vw;
   }
   .features-grid {
     grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .feature-card {
+    padding: 30px 20px;
   }
   .ambiance-strip {
     grid-template-columns: 1fr;
     height: auto;
   }
   .ambiance-item {
-    height: 200px;
+    height: 220px;
   }
+  .cta-banner {
+    padding: 60px 5vw;
+  }
+  .cta-content p {
+    font-size: 15px;
+  }
+  .cta-banner .hero-actions {
+    max-width: 300px;
+    margin: 0 auto;
+  }
+
+  /* ─── MOBILE REVIEWS ─── */
+  .rating-score {
+    font-size: 60px;
+  }
+
+  /* ─── MOBILE FORMS & GRIDS ─── */
   .res-form {
     grid-template-columns: 1fr;
   }
@@ -1047,6 +1123,8 @@ em {
     gap: 15px;
     text-align: center;
   }
+
+  /* ─── MOBILE PAGE HERO ─── */
   .page-hero {
     min-height: 40vh;
   }
