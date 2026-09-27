@@ -73,32 +73,147 @@
         </div>
       </section>
 
-      <!-- MASONRY GALLERY -->
+      <!-- SHOWCASE GALLERY -->
       <section class="section gallery" id="gallery">
         <div class="section-header reveal">
-          <span class="overline">Our Spaces</span>
-          <h2>The Ambiance.</h2>
+          <span class="overline">Our Spaces & Menus</span>
+          <h2>The Showcase.</h2>
+          <div class="ornament" style="margin: 20px auto;">
+            <div class="ornament-line"></div>
+            <div class="ornament-diamond"></div>
+            <div class="ornament-line"></div>
+          </div>
+          <p style="color: #666; max-width: 650px; margin: 0 auto;">Immerse yourself in Dumka's premier luxury dining venue — from ambient golden-lit halls and private glass cabins to our authentic printed menu cards.</p>
         </div>
+
+        <!-- Filter Controls -->
+        <div class="gallery-filters reveal">
+          <button class="gallery-filter-btn active" data-filter="all">All Showcase (11)</button>
+          <button class="gallery-filter-btn" data-filter="ambiance">Interiors & Ambiance (5)</button>
+          <button class="gallery-filter-btn" data-filter="menu">Official Menu Cards (6)</button>
+          <button class="gallery-filter-btn" data-filter="cabin">Private Glass Cabin (1)</button>
+        </div>
+
         <div class="gallery-masonry reveal-stagger">
-          <div class="gallery-item">
-            <img src="assets/zoox-interior-01.webp" alt="Private glass cabin for intimate dining" loading="lazy" />
-            <div class="gallery-caption">Private Glass Cabin</div>
+          <!-- 1: Glass Cabin -->
+          <div class="gallery-item" data-category="ambiance cabin" data-src="assets/zoox-interior-01.webp" data-title="Private Glass Dining Cabin" data-tag="Exclusive Experience" data-desc="Exclusive glass-enclosed dining cabin featuring ambient lighting and personalized table service for intimate celebrations and VIP dining.">
+            <span class="gallery-badge">Private Cabin</span>
+            <div class="gallery-zoom-hint">🔍</div>
+            <img src="assets/zoox-interior-01.webp" alt="Private glass cabin for intimate dining at ZOOX Dumka" loading="lazy" />
+            <div class="gallery-caption">
+              <h4>Private Glass Cabin</h4>
+              <p>Intimate, climate-controlled glass dining cabin</p>
+            </div>
           </div>
-          <div class="gallery-item">
-            <img src="assets/zoox-interior-02.webp" alt="Grand dining hall with golden lighting" loading="lazy" />
-            <div class="gallery-caption">Grand Dining Hall</div>
+
+          <!-- 2: Grand Dining Hall -->
+          <div class="gallery-item" data-category="ambiance" data-src="assets/zoox-interior-02.webp" data-title="Grand Dining Hall" data-tag="Main Hall" data-desc="Spacious luxury dining hall adorned with wooden coffered ceilings, warm golden cove illumination, and plush banquettes.">
+            <span class="gallery-badge">Dining Hall</span>
+            <div class="gallery-zoom-hint">🔍</div>
+            <img src="assets/zoox-interior-02.webp" alt="Grand dining hall with golden lighting at ZOOX Dumka" loading="lazy" />
+            <div class="gallery-caption">
+              <h4>Grand Dining Hall</h4>
+              <p>Warm ambient lighting with luxury leather booths</p>
+            </div>
           </div>
-          <div class="gallery-item">
-            <img src="assets/zoox-interior-03.webp" alt="Elegant dining area with fluted pillars" loading="lazy" />
-            <div class="gallery-caption">Elegant Interiors</div>
+
+          <!-- 3: Fluted Pillars Seating -->
+          <div class="gallery-item" data-category="ambiance" data-src="assets/zoox-interior-03.webp" data-title="Fluted Column Booths" data-tag="Architecture" data-desc="Refined interior details featuring architectural fluted pillars, ambient wall sconces, and curated floral centerpieces.">
+            <span class="gallery-badge">Architecture</span>
+            <div class="gallery-zoom-hint">🔍</div>
+            <img src="assets/zoox-interior-03.webp" alt="Elegant dining area with fluted pillars at ZOOX Dumka" loading="lazy" />
+            <div class="gallery-caption">
+              <h4>Fluted Column Booths</h4>
+              <p>Architectural symmetry and comfortable family booths</p>
+            </div>
           </div>
-          <div class="gallery-item">
-            <img src="assets/zoox-interior-04.webp" alt="Complete dining hall overview" loading="lazy" />
-            <div class="gallery-caption">The Full Experience</div>
+
+          <!-- 4: Full Experience -->
+          <div class="gallery-item" data-category="ambiance" data-src="assets/zoox-interior-04.webp" data-title="Panoramic Hall Experience" data-tag="Ambiance" data-desc="Dumka's signature luxury restaurant setting designed for memorable family gatherings and culinary journeys.">
+            <span class="gallery-badge">Full Hall</span>
+            <div class="gallery-zoom-hint">🔍</div>
+            <img src="assets/zoox-interior-04.webp" alt="Complete dining hall overview at ZOOX Dumka" loading="lazy" />
+            <div class="gallery-caption">
+              <h4>Panoramic Experience</h4>
+              <p>A feast for both the eyes and the palate</p>
+            </div>
           </div>
-          <div class="gallery-item">
-            <img src="assets/zoox-interior-05.webp" alt="Party and celebration setup" loading="lazy" />
-            <div class="gallery-caption">Celebration Setup</div>
+
+          <!-- 5: Celebration Setup -->
+          <div class="gallery-item" data-category="ambiance" data-src="assets/zoox-interior-05.webp" data-title="Celebration & Party Setting" data-tag="Celebrations" data-desc="Curated party setups for birthdays, anniversaries, corporate banquets, and milestone events in Dumka.">
+            <span class="gallery-badge">Events</span>
+            <div class="gallery-zoom-hint">🔍</div>
+            <img src="assets/zoox-interior-05.webp" alt="Party and celebration setup at ZOOX Dumka" loading="lazy" />
+            <div class="gallery-caption">
+              <h4>Celebration & Banquets</h4>
+              <p>Curated setups for unforgettable private celebrations</p>
+            </div>
+          </div>
+
+          <!-- 6: Asian & Tandoor Menu Card -->
+          <div class="gallery-item menu-card-item" data-category="menu" data-src="assets/zoox-menu-asian-tandoori.webp" data-title="Asian Appetizers & Tandoor E Dastaan" data-tag="Official Menu Card" data-desc="Official ZOOX printed menu card featuring Konjee Lamb, Paneer Tikka, Dahi Ke Kebab, Khumb E Lazeez & signature clay oven specials.">
+            <span class="gallery-badge">Menu Card</span>
+            <div class="gallery-zoom-hint">🔍</div>
+            <img src="assets/zoox-menu-asian-tandoori.webp" alt="Asian Appetizers & Tandoor E Dastaan official menu card ZOOX Dumka" loading="lazy" />
+            <div class="gallery-caption">
+              <h4>Asian & Tandoor Specials</h4>
+              <p>Official printed menu: Kebabs, Lamb & Starters</p>
+            </div>
+          </div>
+
+          <!-- 7: Continental Appetizers Menu Card -->
+          <div class="gallery-item menu-card-item" data-category="menu" data-src="assets/zoox-menu-continental-appetizers.webp" data-title="Continental Appetizers" data-tag="Official Menu Card" data-desc="Official ZOOX printed menu card featuring Hummus Platter, Chicken Ala Kiev, Fish & Chips, Prawn Meunière & Cheesy Nachos.">
+            <span class="gallery-badge">Menu Card</span>
+            <div class="gallery-zoom-hint">🔍</div>
+            <img src="assets/zoox-menu-continental-appetizers.webp" alt="Continental Appetizers official menu card ZOOX Dumka" loading="lazy" />
+            <div class="gallery-caption">
+              <h4>Continental Appetizers</h4>
+              <p>Official printed menu: Chicken Kiev, Fish & Chips</p>
+            </div>
+          </div>
+
+          <!-- 8: Indian Main Course Menu Card -->
+          <div class="gallery-item menu-card-item" data-category="menu" data-src="assets/zoox-menu-indian-main.webp" data-title="Indian Main Course" data-tag="Official Menu Card" data-desc="Official ZOOX printed menu card featuring Dal Bukhara, Yellow Dal Tadka, Paneer Makhani, Sham Savera & Subz Hyderabadi.">
+            <span class="gallery-badge">Menu Card</span>
+            <div class="gallery-zoom-hint">🔍</div>
+            <img src="assets/zoox-menu-indian-main.webp" alt="Indian Main Course official menu card ZOOX Dumka" loading="lazy" />
+            <div class="gallery-caption">
+              <h4>Indian Main Course</h4>
+              <p>Official printed menu: Dal Bukhara, Paneer Makhani</p>
+            </div>
+          </div>
+
+          <!-- 9: Salads & Soups Menu Card -->
+          <div class="gallery-item menu-card-item" data-category="menu" data-src="assets/zoox-menu-salads-soups.webp" data-title="Salads & Gourmet Soups" data-tag="Official Menu Card" data-desc="Official ZOOX printed menu card featuring Caesar Salad, Roasted Pumpkin Soup, Wild Mushroom Truffle Soup, Lung Fung & Tom Yum.">
+            <span class="gallery-badge">Menu Card</span>
+            <div class="gallery-zoom-hint">🔍</div>
+            <img src="assets/zoox-menu-salads-soups.webp" alt="Salads & Gourmet Soups official menu card ZOOX Dumka" loading="lazy" />
+            <div class="gallery-caption">
+              <h4>Salads & Gourmet Soups</h4>
+              <p>Official printed menu: Caesar Salad, Truffle & Broths</p>
+            </div>
+          </div>
+
+          <!-- 10: Continental Main Course Menu Card -->
+          <div class="gallery-item menu-card-item" data-category="menu" data-src="assets/zoox-menu-continental-main.webp" data-title="Continental Main Course" data-tag="Official Menu Card" data-desc="Official ZOOX printed menu card featuring Grilled Chicken Breast Meal, River Sole Fish, Chili Garlic Prawns with Spaghetti & Fish La Paprika.">
+            <span class="gallery-badge">Menu Card</span>
+            <div class="gallery-zoom-hint">🔍</div>
+            <img src="assets/zoox-menu-continental-main.webp" alt="Continental Main Course official menu card ZOOX Dumka" loading="lazy" />
+            <div class="gallery-caption">
+              <h4>Continental Main Course</h4>
+              <p>Official printed menu: Grilled Sole, Steaks & Pastas</p>
+            </div>
+          </div>
+
+          <!-- 11: Chinese Noodles & Desserts Menu Card -->
+          <div class="gallery-item menu-card-item" data-category="menu" data-src="assets/zoox-menu-chinese-desserts.webp" data-title="Chinese Rice, Noodles & Desserts" data-tag="Official Menu Card" data-desc="Official ZOOX printed menu card featuring Chili Garlic Hakka Noodles, Schezwan Noodles, Zaffrani Firni, Shahi Tukda, Gajar Halwa & Darsaan.">
+            <span class="gallery-badge">Menu Card</span>
+            <div class="gallery-zoom-hint">🔍</div>
+            <img src="assets/zoox-menu-chinese-desserts.webp" alt="Chinese Rice, Noodles and Desserts official menu card ZOOX Dumka" loading="lazy" />
+            <div class="gallery-caption">
+              <h4>Chinese & Artisanal Desserts</h4>
+              <p>Official printed menu: Hakka Noodles, Firni, Shahi Tukda</p>
+            </div>
           </div>
         </div>
       </section>
@@ -161,6 +276,23 @@
         <a href="#top">BACK TO TOP ↑</a>
       </div>
     </footer>
+
+    <!-- LUXURY LIGHTBOX MODAL -->
+    <div class="zoox-lightbox" id="zooxLightbox" role="dialog" aria-modal="true" aria-hidden="true">
+      <button class="lightbox-close" id="lightboxClose" aria-label="Close modal">✕</button>
+      <button class="lightbox-btn lightbox-prev" id="lightboxPrev" aria-label="Previous image">‹</button>
+      <button class="lightbox-btn lightbox-next" id="lightboxNext" aria-label="Next image">›</button>
+      
+      <div class="lightbox-content-wrapper">
+        <img class="lightbox-img" id="lightboxImg" src="" alt="High resolution preview" />
+        <div class="lightbox-info">
+          <span class="lightbox-tag" id="lightboxTag">Tag</span>
+          <h3 class="lightbox-title" id="lightboxTitle">Title</h3>
+          <p class="lightbox-desc" id="lightboxDesc">Description</p>
+          <div class="lightbox-counter" id="lightboxCounter">1 / 11</div>
+        </div>
+      </div>
+    </div>
 
     <button class="back-to-top" aria-label="Back to top">↑</button>
     <script src="script.js" defer></script>

@@ -292,5 +292,142 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   }
+
+  // ═══════════════════════════════════════════════
+  // Gallery Filtering & Luxury Lightbox
+  // ═══════════════════════════════════════════════
+  const filterBtns = document.querySelectorAll('.gallery-filter-btn');
+  const galleryItems = document.querySelectorAll('.gallery-item');
+  const lightbox = document.getElementById('zooxLightbox');
+  const lightboxImg = document.getElementById('lightboxImg');
+  const lightboxTitle = document.getElementById('lightboxTitle');
+  const lightboxTag = document.getElementById('lightboxTag');
+  const lightboxDesc = document.getElementById('lightboxDesc');
+  const lightboxCounter = document.getElementById('lightboxCounter');
+  const lightboxClose = document.getElementById('lightboxClose');
+  const lightboxPrev = document.getElementById('lightboxPrev');
+  const lightboxNext = document.getElementById('lightboxNext');
+
+  // Filter Buttons
+  if (filterBtns.length > 0 && galleryItems.length > 0) {
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        const filter = btn.getAttribute('data-filter');
+        galleryItems.forEach(item => {
+          const category = item.getAttribute('data-category') || '';
+          if (filter === 'all' || category.includes(filter)) {
+            item.classList.remove('hidden');
+          } else {
+            item.classList.add('hidden');
+          }
+        });
+      });
+    });
+  }
+
+  // Lightbox Triggerable Elements (Gallery Items & Menu Card Boxes)
+  let activeLightboxItems = [];
+  let currentLightboxIndex = 0;
+
+  function updateLightbox(index) {
+    if (!activeLightboxItems.length || index < 0 || index >= activeLightboxItems.length) return;
+    currentLightboxIndex = index;
+    const currentItem = activeLightboxItems[currentLightboxIndex];
+
+    const src = currentItem.getAttribute('data-src') || '';
+    const title = currentItem.getAttribute('data-title') || 'ZOOX Showcase';
+    const tag = currentItem.getAttribute('data-tag') || 'ZOOX Dumka';
+    const desc = currentItem.getAttribute('data-desc') || '';
+
+    if (lightboxImg) lightboxImg.src = src;
+    if (lightboxTitle) lightboxTitle.textContent = title;
+    if (lightboxTag) lightboxTag.textContent = tag;
+    if (lightboxDesc) lightboxDesc.textContent = desc;
+    if (lightboxCounter) lightboxCounter.textContent = `${currentLightboxIndex + 1} / ${activeLightboxItems.length}`;
+  }
+
+  function openLightbox(elementsArray, startIndex) {
+    if (!lightbox) return;
+    activeLightboxItems = elementsArray;
+    updateLightbox(startIndex);
+    lightbox.classList.add('active');
+    lightbox.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeLightbox() {
+    if (!lightbox) return;
+    lightbox.classList.remove('active');
+    lightbox.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+  }
+
+  // Bind click to gallery items
+  if (galleryItems.length > 0 && lightbox) {
+    galleryItems.forEach(item => {
+      item.addEventListener('click', () => {
+        const visibleItems = Array.from(galleryItems).filter(el => !el.classList.contains('hidden'));
+        const index = visibleItems.indexOf(item);
+        openLightbox(visibleItems, index >= 0 ? index : 0);
+      });
+    });
+  }
+
+  // Bind click to menu card showcase items (on menu.html or elsewhere)
+  const menuCardBoxes = document.querySelectorAll('.menu-card-box');
+  if (menuCardBoxes.length > 0 && lightbox) {
+    menuCardBoxes.forEach((box, index) => {
+      box.addEventListener('click', () => {
+        openLightbox(Array.from(menuCardBoxes), index);
+      });
+    });
+  }
+
+  // Lightbox Controls
+  if (lightbox) {
+    if (lightboxClose) {
+      lightboxClose.addEventListener('click', closeLightbox);
+    }
+
+    if (lightboxPrev) {
+      lightboxPrev.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const prevIndex = (currentLightboxIndex - 1 + activeLightboxItems.length) % activeLightboxItems.length;
+        updateLightbox(prevIndex);
+      });
+    }
+
+    if (lightboxNext) {
+      lightboxNext.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const nextIndex = (currentLightboxIndex + 1) % activeLightboxItems.length;
+        updateLightbox(nextIndex);
+      });
+    }
+
+    // Close on backdrop click outside wrapper
+    lightbox.addEventListener('click', (e) => {
+      if (e.target === lightbox) {
+        closeLightbox();
+      }
+    });
+
+    // Keyboard support (Escape, ArrowLeft, ArrowRight)
+    window.addEventListener('keydown', (e) => {
+      if (!lightbox.classList.contains('active')) return;
+      if (e.key === 'Escape') {
+        closeLightbox();
+      } else if (e.key === 'ArrowLeft') {
+        const prevIndex = (currentLightboxIndex - 1 + activeLightboxItems.length) % activeLightboxItems.length;
+        updateLightbox(prevIndex);
+      } else if (e.key === 'ArrowRight') {
+        const nextIndex = (currentLightboxIndex + 1) % activeLightboxItems.length;
+        updateLightbox(nextIndex);
+      }
+    });
+  }
 });
 
